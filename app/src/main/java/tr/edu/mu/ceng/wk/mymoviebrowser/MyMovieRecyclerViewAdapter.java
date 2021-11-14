@@ -12,10 +12,7 @@ import java.util.List;
 
 import tr.edu.mu.ceng.wk.mymoviebrowser.placeholder.PlaceholderContent.PlaceholderItem;
 
-/**
- * {@link RecyclerView.Adapter} that can display a {@link PlaceholderItem}.
- * TODO: Replace the implementation with code for your data type.
- */
+
 public class MyMovieRecyclerViewAdapter extends
         RecyclerView.Adapter<MyMovieRecyclerViewAdapter.ViewHolder> {
     private final List<Movie> mValues;

@@ -32,7 +32,6 @@ public class DetailsFragment extends Fragment {
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
      *
-     * @param Movie movie.
      * @return A new instance of fragment DetailsFragment.
      */
     // TODO: Rename and change types and number of parameters
@@ -62,6 +61,12 @@ public class DetailsFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        setMovie(view, movie);
+
+
+    }
+
+    public void setMovie(View view, Movie movie) {
 
         TextView txtName = (TextView)view.findViewById(R.id.txtMovieName);
         txtName.setText(movie.getName());
@@ -80,6 +85,5 @@ public class DetailsFragment extends Fragment {
         ListView listView = (ListView) view.findViewById(R.id.lstStars);
         listView.setAdapter(new ArrayAdapter<String>(getActivity(), R.layout.array_adapter,
                 movie.getStars().toArray(new String[1])));
-
     }
 }
